@@ -30,9 +30,11 @@ const fetchBitcoinPrice = async () => {
 
 const jokes = document.querySelector('#jokes');
 const button = document.querySelector('button');
+const jokeContainer = document.querySelector('#jokeContainer');
 
 const addNewJoke = async () => {
     const jokeText = await getDadJoke();
+    jokeContainer.classList.remove('is-hidden');
     jokes.textContent = "";
     jokes.append(jokeText);
 }
